@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #cd5f9e, #c16bb2, #b277c2, #a082ce, #8e8dd6, #7b98df, #67a2e4, #54ace6, #37bae9, #21c6e6, #2cd2de, #4cdcd3);
+    color: #fdfdfd;
+    padding: 10px;
+}
+
+.todoApp {
+    width: 100%;
+    min-width: 265px;
+    max-width: 540px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 100px auto 100px;
+    padding: 40px 30px 10px;
+}
+
+.todoApp h2 {
+    color: #fdfdfd;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: "Sofia", sans-serif;
+}
+
+.todoApp h2 img {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.row input {
+    font-size: 17px;
+    flex: 1;
+    min-width: 100px !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.row button {
+    padding: 20px;
+    font-size: 17px;
+    border: 1px solid green;
+    border-radius: 10px;
+    background-color: rgb(205, 234, 228);
+    color: green;
+    cursor: pointer;
+}
+
+.listContainer li {
+    list-style: none;
+    font-size: 17px;
+    padding: 6px;
+    gap: 10px !important;
+    padding-right: 65px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    color: #202020;
+    background: #fdfdfd;
+    border-radius: 10px;
+    margin: 12px auto 12px;
+    position: relative;
+}
+
+.toggleBtn {
+    background-color: transparent !important;
+    background-image: url("../images/checkbox-unchecked.png");
+    width: 50px;
+    left: 6px;
+    padding-right: 55px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+    box-shadow: none;
+    border: none;
+    background-color: #fdfdfd;
+    display: flex;
+}
+
+.toggleBtnChecked {
+    background-image: url("../images/checkbox-checked.png") !important;
+}
+
+
+.deleteTask {
+    background-color: transparent !important;
+    background-image: url("../images/close.png");
+    background-size: 50px;
+    position: absolute;
+    right: 6px;
+    width: 50px;
+    height: 50px;
+    box-shadow: none;
+    border: none;
+    background-color: #fdfdfd;
+    display: flex;
+}
+
+.textChecked {
+    text-decoration: line-through;
+    color: #aeaeae !important;
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(230, 55, 104);
+}
+
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+    }   
+
+@keyframes fadeIn {
+0% { opacity: 0;
+transform: scale(0.8); }
+100% { opacity: 1; }
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease;
+    }
+  
+@keyframes fadeOut {
+0% { opacity: 1; }
+100% { opacity: 0;
+transform: scale(0.8); }
+}
+
+
+@media (max-width: 500px) {
+    .row input {
+    padding: 14px;
+    }
+
+    .row button {
+        padding: 14px;
+    }
+
+    .todoApp {
+        padding: 40px 10px 10px;
+    }
+
+    .listContainer li {
+        padding: 0px;
+        margin: 10px auto 10px;
+    }
+
+    .row {
+        margin-bottom: 18px;
+    }
+
+
+}
